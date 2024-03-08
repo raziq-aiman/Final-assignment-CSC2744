@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="bar.css" />
+</head>
+<body>
+  <nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href='index.html'>Home</a></li>
+      <li><a href='about.html'>About</a></li>
+      <li><a href='us.html'>Contact Us</a></li>
+    </ul>
+  </nav>
+  <header class="top-1">
+    <h1>💖 Welcome to Flick Nest !</h1>
+  </header>
+  <div class="container">
+    <div class="form-box">
+      <input type="text" id="movieTitle" placeholder="Enter movie title">
+      <button onclick="buttonClicked()">Search</button>
+    </div>
+    <div class="content" style="display:none;"> <!-- initially hidden -->
+      <img id="poster" src="" alt="Movie Poster">
+      <div class="details">
+        <h2 id="title"></h2>
+        <p id="year">Year: <span id="yearValue"></span></p>
+        <p id="genre">Genre: <span id="genreValue"></span></p>
+        <p id="director">Director: <span id="directorValue"></span></p>
+        <p id="actors">Actors: <span id="actorsValue"></span></p>
+        <p id="plot">Plot: <span id="plotValue"></span></p>
+        <p id="rating">IMDb Rating: <span id="ratingValue"></span></p>
+        <p id="awards">Awards: <span id="awardsValue"></span></p>
+        <p id="writer">Writer: <span id="writerValue"></span></p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <label for="crudpage">Want to add your Favourite Movie ?</label>
+    <a href="crud.html" placeholder="crudpage">Click Me</a>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    function updatemenu() {
+      if (document.getElementById('responsive-menu').checked == true) {
+        document.getElementById('menu').style.borderBottomRightRadius = '0';
+        document.getElementById('menu').style.borderBottomLeftRadius = '0';
+      }else{
+        document.getElementById('menu').style.borderRadius = '10px';
+      }
+    }
+  </script>
+</body>
+</html>
